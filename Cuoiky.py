@@ -32,10 +32,10 @@ def phonebook():
             if ktra == False:
                 ten = input('Nhập tên liên lạc cần thêm: ')
                 f = open(r"D:\Tu_duy_lap_trinh\ĐỒ ÁN\contact.txt", "a", encoding="utf-8-sig")
-                lienlac.append( ten + " - " + sdt + "\n")
+                lienlac.append(ten + " - " + sdt + "\n")
                 lienlac = f.write(lienlac[-1])
                 f.close()
-                print("Liên lạc đã được lưu! ")
+                print("Liên lạc đã được lưu!")
 
         elif entry == 3:
             ktra = False
@@ -50,7 +50,6 @@ def phonebook():
                     break
             if ktra == False:
                 print("Liên lạc không tồn tại!")
-
 
         elif entry == 4:
             ktra = False
@@ -67,7 +66,7 @@ def phonebook():
                     confirm = input("Bạn có chắc chắn xóa? Y/N:")
                     if confirm.capitalize() == "Y":
                         lienlac.pop(delete_var)
-                        print(f'Đã xoá khỏi danh bạ')
+                        print(f'Đã xoá khỏi danh bạ!')
                         f = open(r"D:\Tu_duy_lap_trinh\ĐỒ ÁN\contact.txt", "w", encoding="utf-8-sig")
                         for i in lienlac:
                             f.write(i)
